@@ -1,11 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicamentos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: blue;
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .center {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            max-width: 1100px;
+        }
+
+        .logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+
+        .search-box {
+            flex: 3;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 2px solid blue;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: darkblue;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header id="header">
+        <div class="center">
+            <div class="logo">
+                <img src="https://cdn2.solojavirtual.com/loja/arquivos_loja/35200/Fotos/thumbs3/produto_Foto1_8463795.jpg?cache="
+                    alt="Logo Farma Moura">
+            </div>
+            <div class="search-box">
+                <input type="text" name="barradepesquisa" placeholder="Digite sua busca:">
+            </div>
+        </div>
+    </header>
 </body>
+
 </html>

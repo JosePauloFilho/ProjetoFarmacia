@@ -1,11 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beleza e Cuidados</title>
+    <title>Farma Moura</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: blue;
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            max-width: 1100px;
+        }
+
+        .logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+
+        .search-box {
+            flex: 3;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 2px solid blue;
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: darkblue;
+        }
+
+        nav {
+            margin-top: 100px;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            border-radius: 20%;
+            overflow: hidden;
+            transition: 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            border-radius: 20%;
+            transition:0.3s ease;
+        }
+
+        nav ul li a span {
+            display: block;
+            margin-top: 5px;
+        }
+
+        nav ul li a:hover img {
+            transform: scale(1.1);
+            border-color: blue;
+        }
+
+        nav ul li a:hover {
+            border-color: blue;
+        }
+    </style>
 </head>
+
 <body>
-    
+    <header id="header">
+        <div class="center">
+            <div class="logo">
+                <a href="farmacia.html">
+                <img src="https://cdn2.solojavirtual.com/loja/arquivos_loja/35200/Fotos/thumbs3/produto_Foto1_8463795.jpg?cache="
+                    alt="Logo Farma Moura">
+                </a>
+            </div>
+            <div class="search-box">
+                <input type="text" name="barradepesquisa" placeholder="Digite sua busca:">
+            </div>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="medicamentos.html" rel="external">
+                    <img src="https://img.freepik.com/fotos-gratis/frasco-de-remedio-derramando-pilulas-coloridas-retratando-riscos-de-dependencia-de-ia-generativa_188544-12529.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1715644800&semt=sph"
+                        alt="Medicamentos">
+                    <span>Medicamentos</span>
+                </a>
+            </li>
+            <li>
+                <a href="higienepessoal.html" rel="external">
+                    <img src="https://png.pngtree.com/png-clipart/20201223/ourmid/pngtree-blue-square-cute-soap-clipart-png-image_2636924.jpg"
+                        alt="Higiene Pessoal">
+                    <span>Higiene Pessoal</span>
+                </a>
+            </li>
+            <li>
+                <a href="belezaecuidados.html" rel="external">
+                    <img src="https://w7.pngwing.com/pngs/790/207/png-transparent-personal-care-beauty-parlour-cosmetics-lotion-care-icon-purple-cosmetology-magenta.png"
+                        alt="Beleza e Cuidados">
+                    <span>Beleza e Cuidados</span>
+                </a>
+            </li>
+            <li>
+                <a href="Suplementos.html" rel="external">
+                    <img src="https://i.zst.com.br/thumbs/12/9/31/1754562867.jpg"
+                        alt="Suplementos">
+                    <span>Suplementos</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
 </body>
+
 </html>

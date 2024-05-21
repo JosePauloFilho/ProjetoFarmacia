@@ -165,21 +165,121 @@
             </li>
         </ul>
     </nav>
+
+
     <h1>Produtos em promoção</h1>
     <section>
+
         <section>
-            <div><img src="" alt=""></div>
+            <div>
+                <a href="">
+                    <img src="" alt="">
+                </a>
+            </div>
             <div><p>descrição do produto</p></div>
-            <div><p>preço do produto</p></div>   
+            <div><p>preço do produto</p></div>  
+            
+            <section>
+                <div>
+                    <a href="">
+                        <img src="" alt="">
+                    </a>
+                </div>
+                <div>descrição do produto</div>
+                <div>preço do produto</div>
+            </section>
         </section>
+
 
     <h1>Mais Vendidos</h1>
         <section>
-            <div><img src="" alt=""></div>
+            <div>
+                <a href="">
+                    <img src="" alt="">
+                </a>
+            </div>
             <div>descrição do produto</div>
             <div>preço do produto</div>
         </section>
+
+        <section>
+            <div>
+                <a href="">
+                    <img src="" alt="">
+                </a>
+            </div>
+            <div>descrição do produto</div>
+            <div>preço do produto</div>
+        </section>
+
     </section>
+
+
+    <section>
+        <form action="formulario.html" method="get">
+            <label>Nome:</label>
+            <input type="text" name="nome" required>
+
+            <label>E-mail:</label>
+            <input type="email" name="email" required>
+
+            <label>Idade:</label>
+            <input type="number" name="idade" required min="0" max="130">
+
+            <label>Assunto:</label>
+            <select name="assunto" required>
+                <option selected>Selecione uma opção</option>
+                <option value="Sugestão">Sugestão</option>
+                <option value="Reclamação">Reclamação</option>
+                <option value="Elogio">Elogio</option>
+            </select>
+
+            <label>Mensagem:</label>
+            <textarea name="mensagem"></textarea required>
+
+            <label>Concordo com os termos de privacidade do site:</label>
+            <input type="checkbox" name="termo" value="aceito" required>
+
+            <button type="submit" >Enviar></button>
+            <button type="reset">Apague</button>
+        </form>
+    </section>
+
+    <footer>
+        <section>
+            <section>
+             Institucional
+                <ul>
+                    <li><a href="sobre_nos.html">Sobre nós</a></li>
+                    <li><a href="p_privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="trocas.html">Trocas e Devoluções</a></li>
+                 </ul>
+            </section>
+
+            <section>
+                Farmácia Moura | João Pessoa
+                <ul>
+                    <li><a href="">
+                        <img src="" alt="Av.Min.José Américo de Almeida Filho, 484 - Torre - João Pessoa/PB. CEP: 58.040-300">
+                    </a></li>
+
+                    <li><a href="">
+                        <img src="" alt="(83)3214-3601">
+                    </a></li>
+
+                    <li><a href="">
+                        <img src="" alt="Atendimento1@farmamoura.com.br">
+                    </a></li>
+                </ul>
+            </section>
+
+            <section>
+                <img src="" alt="">
+                <h3>Querido Cliente!</h3>
+                <h4>É um prazer ter você aqui!</h4>
+            </section>
+        </section>
+    </footer>
 </body>
 
 </html>

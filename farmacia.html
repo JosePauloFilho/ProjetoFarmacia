@@ -28,6 +28,7 @@
             justify-content: center;
             align-items: center;
         }
+
         .center {
             display: flex;
             align-items: center;
@@ -87,10 +88,9 @@
             text-decoration: none;
             color: black;
             display: block;
-            border-radius: 20%;
+            border-radius: 10%;
             overflow: hidden;
-            transition: 0.3s ease;
-            position: relative;
+            transition: border-color 0.3s ease;
         }
 
         nav ul li a img {
@@ -99,7 +99,7 @@
             object-fit: cover;
             border: 2px solid transparent;
             border-radius: 20%;
-            transition:0.3s ease;
+            transition: 0.3s ease;
         }
 
         nav ul li a span {
@@ -115,6 +115,79 @@
         nav ul li a:hover {
             border-color: rgb(255, 115, 0);
         }
+
+        section {
+            margin: 20px 0;
+        }
+
+        .catalogue {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .catalogue img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .catalogue p {
+            margin: 5px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        form label {
+            margin-bottom: 5px;
+        }
+
+        form input,
+        form select,
+        form textarea,
+        form button {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: rgb(250, 121, 0);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            margin-bottom: 10px;
+        }
+
+        footer img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
     </style>
 </head>
 
@@ -122,163 +195,168 @@
     <header id="header">
         <div class="center">
             <div class="logo">
-                <a href="farmacia.html">
-                <img src="https://cdn2.solojavirtual.com/loja/arquivos_loja/35200/Fotos/thumbs3/produto_Foto1_8463795.jpg?cache="
-                    alt="Logo Farma Moura">
-                </a>
+                <img src="https://cdn2.solojavirtual.com/loja/arquivos_loja/35200/Fotos/thumbs3/produto_Foto1_8463795.jpg?cache=" alt="Logo Farma Moura">
             </div>
             <div class="search-box">
                 <input type="text" name="barradepesquisa" placeholder="Digite sua busca:">
             </div>
         </div>
     </header>
+
     <nav>
         <ul>
             <li>
                 <a href="medicamentos.html" rel="external">
-                    <img src="https://img.freepik.com/fotos-gratis/frasco-de-remedio-derramando-pilulas-coloridas-retratando-riscos-de-dependencia-de-ia-generativa_188544-12529.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1715644800&semt=sph"
-                        alt="Medicamentos">
+                    <img src="https://img.freepik.com/fotos-gratis/frasco-de-remedio-derramando-pilulas-coloridas-retratando-riscos-de-dependencia-de-ia-generativa_188544-12529.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1715644800&semt=sph" alt="Medicamentos">
                     <span>Medicamentos</span>
                 </a>
             </li>
             <li>
                 <a href="higienepessoal.html" rel="external">
-                    <img src="https://png.pngtree.com/png-clipart/20201223/ourmid/pngtree-blue-square-cute-soap-clipart-png-image_2636924.jpg"
-                        alt="Higiene Pessoal">
+                    <img src="https://acdn.mitiendanube.com/stores/001/154/387/products/kit-sh-cond-masc-500ml-mandioca-f5c717204a750aae1417019534293634-1024-1024.jpg" alt="Higiene Pessoal">
                     <span>Higiene Pessoal</span>
                 </a>
             </li>
             <li>
                 <a href="belezaecuidados.html" rel="external">
-                    <img src="https://w7.pngwing.com/pngs/790/207/png-transparent-personal-care-beauty-parlour-cosmetics-lotion-care-icon-purple-cosmetology-magenta.png"
-                        alt="Beleza e Cuidados">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROlH4Xihd536l3Ljf6qw97khLuqptFv6_HMwWhj4OrmA&s" alt="Beleza e Cuidados">
                     <span>Beleza e Cuidados</span>
                 </a>
             </li>
             <li>
-                <a href="Suplementos.html" rel="external">
-                    <img src="https://i.zst.com.br/thumbs/12/9/31/1754562867.jpg"
-                        alt="Suplementos">
-                    <span>Suplementos</span>
+                <a href="suplementos.html" rel="external">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNnV22k2yNkP5VSoRZqUQb2vD1-qGkj29bSRzuXKoqAg&s" alt="Suplementos e vitaminas">
+                    <span>Suplementos e vitaminas</span>
                 </a>
             </li>
         </ul>
     </nav>
 
-
     <h1>Produtos em promoção</h1>
     <section>
+        <div class="product">
+            <a href="">
+                <img src="https://www.drogariaminasbrasil.com.br/media/product/cbc/dipirona-sodica-500mg-ml-gotas-com-10-ml-generico-ems-7b0.jpg" alt="Produto 1">
+            </a>
+            <p>Dipirona Sódica Gotas 500mg Genérico EMS 10ml</p>
+            <p>De R$ 7,64
+                Por:
+                R$5,02</p>
+        </div>
+        <div class="product">
+            <a href="">
+                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/941105-1000-1000/116963---cimegripe-400mg-cimed-20-capsulas-1.jpg?v=638270177140670000" alt="Produto 2">
+            </a>
+            <p>Cimegripe 400mg Cimed 20 Cápsulas</p>
+            <p>De R$ 26,67
+                 Por:
+                 R$ 12,90</p>
 
-        <section>
-            <div>
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </div>
-            <div><p>descrição do produto</p></div>
-            <div><p>preço do produto</p></div>  
-            
-            <section>
-                <div>
-                    <a href="">
-                        <img src="" alt="">
-                    </a>
-                </div>
-                <div>descrição do produto</div>
-                <div>preço do produto</div>
-            </section>
-        </section>
-
-
-    <h1>Mais Vendidos</h1>
-        <section>
-            <div>
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </div>
-            <div>descrição do produto</div>
-            <div>preço do produto</div>
-        </section>
-
-        <section>
-            <div>
-                <a href="">
-                    <img src="" alt="">
-                </a>
-            </div>
-            <div>descrição do produto</div>
-            <div>preço do produto</div>
-        </section>
-
+        </div>
+        <div class="product">
+            <a href="">
+                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/833132-1000-1000/656020---effaclar-gel-concentrado-300gr-loreal-brasil-1.jpg?v=638115020752170000" alt="Produto 3">
+            </a>
+            <p>Gel de Limpeza Facial La Roche-Posay Effaclar Concentrado 300g</p>
+            <p>De R$ 99,90
+                
+                Por:
+                R$ 79,90</p>
+        </div>
     </section>
 
+    <h1>Mais Vendidos</h1>
+    <section>
+        <div>
+            <a href="">
+                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/720275-1000-1000/464473---desodorante-antitranspirante-rexona-men-active-dry-150ml-1.jpg?v=637946408524900000" alt="Produto 4">
+            </a>
+        </div>
+        <div>
+            <p>Desodorante Antitranspirante Aerosol Masculino Rexona Active Dry 72 horas 150ml</p>
+        </div>
+        <div>
+            <p>R$ 17,49</p>
+        </div>
+    </section>
 
     <section>
+        <div>
+            <a href="">
+                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/739692-1000-1000/664820---fralda-pampers-rn-36-un-procter-1.jpg?v=637958722482700000" alt="Produto 5">
+            </a>
+        </div>
+        <div>
+            <p>Fraldas Pampers Recém-Nascido Premium Care RN 36 Unidades</p>
+        </div>
+        <div>
+            <p>R$ 49,99</p>
+        </div>
+    </section>
+    
         <form action="formulario.html" method="get">
-            <label>Nome:</label>
-            <input type="text" name="nome" required>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
 
-            <label>E-mail:</label>
-            <input type="email" name="email" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
 
-            <label>Idade:</label>
-            <input type="number" name="idade" required min="0" max="130">
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required min="0" max="130">
 
-            <label>Assunto:</label>
-            <select name="assunto" required>
-                <option selected>Selecione uma opção</option>
+            <label for="assunto">Assunto:</label>
+            <select id="assunto" name="assunto" required>
+                <option value="" selected disabled>Selecione uma opção</option>
                 <option value="Sugestão">Sugestão</option>
                 <option value="Reclamação">Reclamação</option>
                 <option value="Elogio">Elogio</option>
             </select>
 
-            <label>Mensagem:</label>
+            <label for="mensagem">Mensagem:</label>
             <textarea name="mensagem"></textarea required>
 
-            <label>Concordo com os termos de privacidade do site:</label>
-            <input type="checkbox" name="termo" value="aceito" required>
-
-            <button type="submit" >Enviar></button>
-            <button type="reset">Apague</button>
-        </form>
-    </section>
-
-    <footer>
-        <section>
-            <section>
-             Institucional
-                <ul>
-                    <li><a href="sobre_nos.html">Sobre nós</a></li>
-                    <li><a href="p_privacidade.html">Política de Privacidade</a></li>
-                    <li><a href="trocas.html">Trocas e Devoluções</a></li>
-                 </ul>
-            </section>
-
-            <section>
-                Farmácia Moura | João Pessoa
-                <ul>
-                    <li><a href="">
-                        <img src="" alt="Av.Min.José Américo de Almeida Filho, 484 - Torre - João Pessoa/PB. CEP: 58.040-300">
-                    </a></li>
-
-                    <li><a href="">
-                        <img src="" alt="(83)3214-3601">
-                    </a></li>
-
-                    <li><a href="">
-                        <img src="" alt="Atendimento1@farmamoura.com.br">
-                    </a></li>
-                </ul>
-            </section>
-
-            <section>
-                <img src="" alt="">
-                <h3>Querido Cliente!</h3>
-                <h4>É um prazer ter você aqui!</h4>
-            </section>
+                <label>Concordo com os termos de privacidade do site:</label>
+                <input type="checkbox" name="termo" value="aceito" required>
+    
+                <button type="submit" >Enviar></button>
+                <button type="reset">Apague</button>
+            </form>
         </section>
-    </footer>
-</body>
-
-</html>
+    
+        <footer>
+            <section>
+                <section>
+                 Institucional
+                    <ul>
+                        <li><a href="sobre_nos.html">Sobre nós</a></li>
+                        <li><a href="p_privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="trocas.html">Trocas e Devoluções</a></li>
+                     </ul>
+                </section>
+    
+                <section>
+                    Farmácia Moura | João Pessoa
+                    <ul>
+                        <li><a href="">
+                            <img src="" alt="Av.Min.José Américo de Almeida Filho, 484 - Torre - João Pessoa/PB. CEP: 58.040-300">
+                        </a></li>
+    
+                        <li><a href="">
+                            <img src="" alt="(83)3214-3601">
+                        </a></li>
+    
+                        <li><a href="">
+                            <img src="" alt="Atendimento1@farmamoura.com.br">
+                        </a></li>
+                    </ul>
+                </section>
+    
+                <section>
+                    <img src="" alt="">
+                    <h3>Querido Cliente!</h3>
+                    <h4>É um prazer ter você aqui!</h4>
+                </section>
+            </section>
+        </footer>
+    </body>
+    </html>

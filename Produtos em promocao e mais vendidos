@@ -1,0 +1,63 @@
+<HTML>
+<h1>Produtos em promoção</h1>
+    <section>
+        <div class="product">
+            <a href="">
+                <img src="https://www.drogariaminasbrasil.com.br/media/product/cbc/dipirona-sodica-500mg-ml-gotas-com-10-ml-generico-ems-7b0.jpg" alt="Produto 1">
+            </a>
+            <p>Dipirona Sódica Gotas 500mg Genérico EMS 10ml</p>
+            <p>De R$ 7,64
+                Por:
+                R$5,02</p>
+        </div>
+        <div class="product">
+            <a href="">
+                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/941105-1000-1000/116963---cimegripe-400mg-cimed-20-capsulas-1.jpg?v=638270177140670000" alt="Produto 2">
+            </a>
+            <p>Cimegripe 400mg Cimed 20 Cápsulas</p>
+            <p>De R$ 26,67
+                 Por:
+                 R$ 12,90</p>
+
+        </div>
+        <div class="product">
+            <a href="">
+                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/833132-1000-1000/656020---effaclar-gel-concentrado-300gr-loreal-brasil-1.jpg?v=638115020752170000" alt="Produto 3">
+            </a>
+            <p>Gel de Limpeza Facial La Roche-Posay Effaclar Concentrado 300g</p>
+            <p>De R$ 99,90
+                
+                Por:
+                R$ 79,90</p>
+        </div>
+    </section>
+
+    <h1>Mais Vendidos</h1>
+    <section>
+        <div>
+            <a href="">
+                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/720275-1000-1000/464473---desodorante-antitranspirante-rexona-men-active-dry-150ml-1.jpg?v=637946408524900000" alt="Produto 4">
+            </a>
+        </div>
+        <div>
+            <p>Desodorante Antitranspirante Aerosol Masculino Rexona Active Dry 72 horas 150ml</p>
+        </div>
+        <div>
+            <p>R$ 17,49</p>
+        </div>
+    </section>
+
+    <section>
+        <div>
+            <a href="">
+                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/739692-1000-1000/664820---fralda-pampers-rn-36-un-procter-1.jpg?v=637958722482700000" alt="Produto 5">
+            </a>
+        </div>
+        <div>
+            <p>Fraldas Pampers Recém-Nascido Premium Care RN 36 Unidades</p>
+        </div>
+        <div>
+            <p>R$ 49,99</p>
+        </div>
+    </section>
+</HTML>

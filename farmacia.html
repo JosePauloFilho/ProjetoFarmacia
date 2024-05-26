@@ -14,6 +14,14 @@
 
         body {
             font-family: Arial, sans-serif;
+            padding-top: 80px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
         }
 
         header {
@@ -41,7 +49,29 @@
             text-align: center;
         }
 
+        .logo a {
+            display: inline-block;
+        }
+
         .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+
+        .suggestion-logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .suggestion-logo a {
+            display: inline-block;
+        }
+
+        .suggestion-logo img {
             width: 50px;
             height: 50px;
             object-fit: cover;
@@ -69,8 +99,21 @@
             border-color: rgb(115, 255, 0);
         }
 
+        .cart-link {
+            flex: 1;
+            text-align: right;
+            padding-right: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .cart-link::after {
+            content: '🛒';
+            font-size: 24px;
+        }
+
         nav {
-            margin-top: 100px;
+            margin-top: 20px;
             padding: 20px 0;
             text-align: center;
         }
@@ -114,6 +157,265 @@
 
         nav ul li a:hover {
             border-color: rgb(255, 115, 0);
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        .product {
+            display: inline-block;
+            width: 200px;
+            text-align: center;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .product p {
+            margin: 5px 0;
+        }
+
+        .product .price {
+            color: green;
+            font-weight: bold;
+        }
+
+        .product button {
+            padding: 10px;
+            border: none;
+            background-color: rgb(250, 121, 0);
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .product button:hover {
+            background-color: rgb(253, 150, 0);
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-container {
+            position: fixed;
+            top: 80px;
+            right: 20px;
+            background: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 300px;
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        .cart-container.show {
+            display: block;
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .cart-header {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .cart-item .item-name {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-item .item-name img {
+            width: 40px;
+            height: 40px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 10px;
+            border: 2px solid rgb(250, 121, 0);
+        }
+
+        .cart-item .item-price {
+            flex: 0 0 80px;
+            text-align: right;
+        }
+
+        .cart-items {
+            border: 2px solid rgb(250, 121, 0);
+            border-radius: 10px;
+            padding: 10px;
+            transition: border-color 0.3s ease;
+        }
+
+        .cart-items:hover {
+            border-color: rgb(253, 114, 0);
+        }
+
+
+        .cart-footer {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .payment-methods {
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .payment-methods label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .payment-methods input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .payment-details {
+            display: none;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        .payment-details.active {
+            display: block;
+        }
+
+        .order-code {
+            display: none;
+            margin-top: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: green;
+        }
+
+        .order-code.active {
+            display: block;
+        }
+
+        footer {
+            background-color: rgb(250, 121, 0);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+            width: 100%;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer ul li {
+            margin-right: 20px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .center {
+                flex-direction: column;
+            }
+
+            .logo,
+            .search-box,
+            .cart-link,
+            .suggestion-logo {
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .search-box input {
+                width: 90%;
+            }
+
+            .cart-container {
+                width: 90%;
+                right: 5%;
+            }
+
+            footer ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer ul li {
+                margin-bottom: 10px;
+            }
+        }
+
+        .suggestion-form-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+
+        .suggestion-form-container h2 {
+            margin-bottom: 10px;
+        }
+
+        .suggestion-form-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .suggestion-form-container input,
+        .suggestion-form-container textarea {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .suggestion-form-container button {
+            padding: 10px;
+            border: none;
+            background-color: rgb(250, 121, 0);
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .suggestion-form-container button:hover {
+            background-color: rgb(253, 150, 0);
         }
 
         section {
@@ -187,176 +489,245 @@
         .footer-section {
             margin-bottom: 20px;
         }
-
     </style>
 </head>
 
 <body>
-    <header id="header">
+    <header>
         <div class="center">
             <div class="logo">
-                <img src="https://cdn2.solojavirtual.com/loja/arquivos_loja/35200/Fotos/thumbs3/produto_Foto1_8463795.jpg?cache=" alt="Logo Farma Moura">
+                <a href="farmacia.html">
+                    <img src="logofarmamoura.jpg" alt="Logo Farma Moura">
+                </a>
             </div>
             <div class="search-box">
-                <input type="text" name="barradepesquisa" placeholder="Digite sua busca:">
+                <input type="text" placeholder="Pesquise por medicamentos..." id="search-box">
+            </div>
+            <a href="#" class="cart-link" id="cart-link"></a>
+            <div class="suggestion-logo">
+                <a href="javascript:void(0)" onclick="openSuggestionForm()">
+                    <img src="https://media.istockphoto.com/id/1186954642/vector/chat-message-bubbles-icon-on-white-background-vector-stock-illustration.jpg?s=612x612&w=0&k=20&c=YUCfUA34DKg-ne9rYKXtdElJ6xy6N_Locz1ecC8-zZU=" alt="Deixe uma Sugestão">
+                </a>
             </div>
         </div>
     </header>
 
     <nav>
         <ul>
-            <li>
-                <a href="medicamentos.html" rel="external">
-                    <img src="https://img.freepik.com/fotos-gratis/frasco-de-remedio-derramando-pilulas-coloridas-retratando-riscos-de-dependencia-de-ia-generativa_188544-12529.jpg?size=626&ext=jpg&ga=GA1.1.44546679.1715644800&semt=sph" alt="Medicamentos">
-                    <span>Medicamentos</span>
-                </a>
-            </li>
-            <li>
-                <a href="higienepessoal.html" rel="external">
-                    <img src="https://acdn.mitiendanube.com/stores/001/154/387/products/kit-sh-cond-masc-500ml-mandioca-f5c717204a750aae1417019534293634-1024-1024.jpg" alt="Higiene Pessoal">
-                    <span>Higiene Pessoal</span>
-                </a>
-            </li>
-            <li>
-                <a href="belezaecuidados.html" rel="external">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROlH4Xihd536l3Ljf6qw97khLuqptFv6_HMwWhj4OrmA&s" alt="Beleza e Cuidados">
-                    <span>Beleza e Cuidados</span>
-                </a>
-            </li>
-            <li>
-                <a href="suplementos.html" rel="external">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNnV22k2yNkP5VSoRZqUQb2vD1-qGkj29bSRzuXKoqAg&s" alt="Suplementos e vitaminas">
-                    <span>Suplementos e vitaminas</span>
-                </a>
-            </li>
+            <li><a href="javascript:void(0)" onclick="showCategory('analgesicos')"><img
+                        src="https://www.drogariaminasbrasil.com.br/media/product/b50/analgesico-dorflex-24-comprimidos-aab.jpg"
+                        alt="Analgesicos"><span>Analgesicos</span></a></li>
+            <li><a href="javascript:void(0)" onclick="showCategory('antibioticos')"><img
+                        src="https://media.istockphoto.com/id/495494798/pt/foto/antibi%C3%B3ticos.jpg?s=612x612&w=0&k=20&c=sO0EnANoC0PX46HSVX_eTnN2vXg1OWbdMBRrbdhuFqI="
+                        alt="Antibioticos"><span>Antibioticos</span></a></li>
+            <li><a href="javascript:void(0)" onclick="showCategory('antiinflamatorios')"><img
+                        src="https://drogariasp.vteximg.com.br/arquivos/ids/932092-1000-1000/image-24e8cc748c574de2bb32a3f8de548919.jpg?v=638249373694900000"
+                        alt="Anti-inflamatorios"><span>Anti-inflamatorios</span></a></li>
+            <li><a href="javascript:void(0)" onclick="showCategory('antivirais')"><img
+                        src="https://revistapesquisa.fapesp.br/wp-content/uploads/2021/12/SITE_CovidAntivirais-0-1140.jpg"
+                        alt="Antivirais"><span>Antivirais</span></a></li>
         </ul>
     </nav>
-
-    <h1>Produtos em promoção</h1>
-    <section>
-        <div class="product">
-            <a href="">
-                <img src="https://www.drogariaminasbrasil.com.br/media/product/cbc/dipirona-sodica-500mg-ml-gotas-com-10-ml-generico-ems-7b0.jpg" alt="Produto 1">
-            </a>
-            <p>Dipirona Sódica Gotas 500mg Genérico EMS 10ml</p>
-            <p>De R$ 7,64
-                Por:
-                R$5,02</p>
-        </div>
-        <div class="product">
-            <a href="">
-                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/941105-1000-1000/116963---cimegripe-400mg-cimed-20-capsulas-1.jpg?v=638270177140670000" alt="Produto 2">
-            </a>
-            <p>Cimegripe 400mg Cimed 20 Cápsulas</p>
-            <p>De R$ 26,67
-                 Por:
-                 R$ 12,90</p>
-
-        </div>
-        <div class="product">
-            <a href="">
-                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/833132-1000-1000/656020---effaclar-gel-concentrado-300gr-loreal-brasil-1.jpg?v=638115020752170000" alt="Produto 3">
-            </a>
-            <p>Gel de Limpeza Facial La Roche-Posay Effaclar Concentrado 300g</p>
-            <p>De R$ 99,90
-                
-                Por:
-                R$ 79,90</p>
-        </div>
-    </section>
-
-    <h1>Mais Vendidos</h1>
-    <section>
-        <div>
-            <a href="">
-                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/720275-1000-1000/464473---desodorante-antitranspirante-rexona-men-active-dry-150ml-1.jpg?v=637946408524900000" alt="Produto 4">
-            </a>
-        </div>
-        <div>
-            <p>Desodorante Antitranspirante Aerosol Masculino Rexona Active Dry 72 horas 150ml</p>
-        </div>
-        <div>
-            <p>R$ 17,49</p>
-        </div>
-    </section>
-
-    <section>
-        <div>
-            <a href="">
-                <img src="https://drogariasp.vteximg.com.br/arquivos/ids/739692-1000-1000/664820---fralda-pampers-rn-36-un-procter-1.jpg?v=637958722482700000" alt="Produto 5">
-            </a>
-        </div>
-        <div>
-            <p>Fraldas Pampers Recém-Nascido Premium Care RN 36 Unidades</p>
-        </div>
-        <div>
-            <p>R$ 49,99</p>
-        </div>
-    </section>
-    
-        <form action="formulario.html" method="get">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="idade">Idade:</label>
-            <input type="number" id="idade" name="idade" required min="0" max="130">
-
-            <label for="assunto">Assunto:</label>
-            <select id="assunto" name="assunto" required>
-                <option value="" selected disabled>Selecione uma opção</option>
-                <option value="Sugestão">Sugestão</option>
-                <option value="Reclamação">Reclamação</option>
-                <option value="Elogio">Elogio</option>
-            </select>
-
-            <label for="mensagem">Mensagem:</label>
-            <textarea name="mensagem"></textarea required>
-
-                <label>Concordo com os termos de privacidade do site:</label>
-                <input type="checkbox" name="termo" value="aceito" required>
-    
-                <button type="submit" >Enviar></button>
-                <button type="reset">Apague</button>
+    <main>
+        <section id="medicamentos">
+        </section>
+        <section class="suggestion-form-container" id="suggestion-form-container" style="display: none;">
+            <div class="suggestion-logo">
+            <h2>Formulário de Sugestão</h2>
+            <form id="suggestion-form">
+                <input type="text" id="name" placeholder="Nome">
+                <input type="email" id="email" placeholder="Email">
+                <input type="number" id="phone" placeholder="Número de Telefone">
+                <textarea id="suggestion" placeholder="Deixe sua sugestão aqui..."></textarea>
+                <button type="button" onclick="sendSuggestion()">Enviar Sugestão</button>
             </form>
         </section>
-    
-        <footer>
-            <section>
-                <section>
-                 Institucional
-                    <ul>
-                        <li><a href="sobre_nos.html">Sobre nós</a></li>
-                        <li><a href="p_privacidade.html">Política de Privacidade</a></li>
-                        <li><a href="trocas.html">Trocas e Devoluções</a></li>
-                     </ul>
-                </section>
-    
-                <section>
-                    Farmácia Moura | João Pessoa
-                    <ul>
-                        <li><a href="">
-                            <img src="" alt="Av.Min.José Américo de Almeida Filho, 484 - Torre - João Pessoa/PB. CEP: 58.040-300">
-                        </a></li>
-    
-                        <li><a href="">
-                            <img src="" alt="(83)3214-3601">
-                        </a></li>
-    
-                        <li><a href="">
-                            <img src="" alt="Atendimento1@farmamoura.com.br">
-                        </a></li>
-                    </ul>
-                </section>
-    
-                <section>
-                    <img src="" alt="">
-                    <h3>Querido Cliente!</h3>
-                    <h4>É um prazer ter você aqui!</h4>
-                </section>
-            </section>
-        </footer>
-    </body>
-    </html>
+    </main>
+    <div class="cart-container" id="cart-container">
+        <div class="cart-header">Carrinho</div>
+        <div class="cart-items"></div>
+        <div class="cart-footer">
+            <div class="payment-methods">
+                <label><input type="radio" name="payment" value="credit-card"> Cartão de Crédito</label>
+                <label><input type="radio" name="payment" value="boleto"> Boleto</label>
+                <label><input type="radio" name="payment" value="pix"> Pix</label>
+            </div>
+            <div class="payment-details" id="payment-details">
+                <p>Detalhes de pagamento serão exibidos aqui</p>
+            </div>
+            <button onclick="finalizePurchase()">Finalizar Compra</button>
+            <div class="order-code" id="order-code">Código do Pedido: 123456</div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-section">
+            <p>&copy; 2023 Farma Moura. Todos os direitos reservados.</p>
+        </div>
+        <ul>
+            <li><a
+                    href="https://www.google.com/maps/place/R.+Daura+Sara%C3%ADva,+287+-+Aeroporto,+Bayeux+-+PB,+58113-410/@-7.1409187,-34.9376958,17z/data=!3m1!4b1!4m6!3m5!1s0x7ace8c5b8700e03:0xb70c336d5687d3b1!8m2!3d-7.1409187!4d-34.9376958!16s%2Fg%2F11lcc586fk?entry=ttu">Endereço</a>
+            </li>
+            <li><a href="https://www.instagram.com/farma.moura/">Contato</a></li>
+            <li><a href="Termos de Privacidade.html">Termos de Serviço</a></li>
+        </ul>
+
+    </footer>
+    <script>
+        const medications = {
+            analgesicos: [
+                { name: "Paracetamol", price: "R$ 10,00", image: "https://cdn1.staticpanvel.com.br/produtos/15/111839-15.jpg" },
+                { name: "Dipirona", price: "R$ 8,00", image: "https://www.drogariaminasbrasil.com.br/media/product/9e6/dipirona-monoidratada-1g-com-10-comprimidos-generico-prati-donaduzzi-ed2.jpg" }
+            ],
+            antibioticos: [
+                { name: "Amoxicilina", price: "R$ 20,00", image: "https://medicina.ribeirao.br/wp-content/uploads/2023/09/Amoxicilina-imagem-editorial-caixa.jpeg" },
+                { name: "Azitromicina", price: "R$ 25,00", image: "https://catalogo.riomeddistribuicao.com.br/wp-content/uploads/2024/04/azitromicina-500mg-5com-ret-geolab.webp" }
+            ],
+            antiinflamatorios: [
+                { name: "Ibuprofeno", price: "R$ 15,00", image: "https://www.drogariaminasbrasil.com.br/media/catalog/product/1/0/101392.jpg" },
+                { name: "Diclofenaco", price: "R$ 12,00", image: "https://www.drogariaminasbrasil.com.br/media/catalog/product/cache/5/image/9df78eab33525d08d6e5fb8d27136e95/medicamentos/drogariaminasbrasil_generico_tarja_vermelha.jpg" }
+            ],
+            antivirais: [
+                { name: "Aciclovir", price: "R$ 30,00", image: "https://drogariacoop.vtexassets.com/arquivos/ids/168703/Novo-Projeto---2023-06-21T141627.678.jpg?v=638229646722770000" },
+                { name: "Oseltamivir", price: "R$ 50,00", image: "https://www.pmvc.ba.gov.br/wp-content/uploads/gripe-1.jpg" }
+            ]
+        };
+        const allMedications = [
+            { name: "Paracetamol", price: "R$ 10,00", image: "https://cdn1.staticpanvel.com.br/produtos/15/111839-15.jpg" },
+            { name: "Dipirona", price: "R$ 8,00", image: "https://www.drogariaminasbrasil.com.br/media/product/9e6/dipirona-monoidratada-1g-com-10-comprimidos-generico-prati-donaduzzi-ed2.jpg" },
+            { name: "Amoxicilina", price: "R$ 20,00", image: "https://medicina.ribeirao.br/wp-content/uploads/2023/09/Amoxicilina-imagem-editorial-caixa.jpeg" },
+            { name: "Azitromicina", price: "R$ 25,00", image: "https://catalogo.riomeddistribuicao.com.br/wp-content/uploads/2024/04/azitromicina-500mg-5com-ret-geolab.webp" },
+            { name: "Ibuprofeno", price: "R$ 15,00", image: "https://www.drogariaminasbrasil.com.br/media/catalog/product/1/0/101392.jpg" },
+            { name: "Diclofenaco", price: "R$ 12,00", image: "https://www.drogariaminasbrasil.com.br/media/catalog/product/cache/5/image/9df78eab33525d08d6e5fb8d27136e95/medicamentos/drogariaminasbrasil_generico_tarja_vermelha.jpg" },
+            { name: "Aciclovir", price: "R$ 30,00", image: "https://drogariacoop.vtexassets.com/arquivos/ids/168703/Novo-Projeto---2023-06-21T141627.678.jpg?v=638229646722770000" },
+            { name: "Oseltamivir", price: "R$ 50,00", image: "https://www.pmvc.ba.gov.br/wp-content/uploads/gripe-1.jpg" },
+            { name: "Cefalexina", price: "R$ 18,00", image: "https://ogimg.infoglobo.com.br/in/18188902-98e-c27/FT1086A/defesacefalexina.jpg" },
+            { name: "Clavulin", price: "R$ 40,00", image: "https://d1xdssnpeez8k0.cloudfront.net/Custom/Content/Products/06/14/0614_clavulin-bd-comprimido-875mg-125mg-caixa-com-20-comprimidos-revestidos-p7896015510015_l1_637217811487158472.jpg" },
+            { name: "Nimesulida", price: "R$ 22,00", image: "https://farmadelivery.vtexassets.com/arquivos/ids/1958923/Image_1.jpg?v=638491891687330000" },
+            { name: "Prednisona", price: "R$ 28,00", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmngxuKMs0y9USEJQFshBHmByLV6YYrEoj2Lt4Dr2EZQ&s" },
+            { name: "Ranitidina", price: "R$ 15,00", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVxYEY7U2y6er5Yc6fkPmOTH5eEYl98U5t2WwGvu15tA&s" },
+            { name: "Omeprazol", price: "R$ 12,00", image: "https://imgprd.martinsatacado.com.br/catalogoimg/264395/01_264395_01.jpg?v=100920221708;ims=1000x" },
+            { name: "Loratadina", price: "R$ 10,00", image: "https://drogafuji.vtexassets.com/arquivos/ids/176605/7896181906322_1.jpg?v=637327724784630000" }
+        ];
+        function showAllMedications() {
+            const container = document.getElementById("medicamentos");
+            container.innerHTML = "";
+            allMedications.forEach(med => {
+                const product = document.createElement("div");
+                product.className = "product";
+                product.innerHTML = `
+                    <img src="${med.image}" alt="${med.name}">
+                    <p>${med.name}</p>
+                    <p class="price">${med.price}</p>
+                    <button onclick="addToCart('${med.name}')">Adicionar ao Carrinho</button>
+                `;
+                container.appendChild(product);
+            });
+        }
+        function addToCartFromMain(name) {
+            const medication = allMedications.find(med => med.name === name);
+            cart.push(medication);
+            updateCart();
+        }
+        function showAllMedications() {
+            const container = document.getElementById("medicamentos");
+            container.innerHTML = "";
+            allMedications.forEach(med => {
+                const product = document.createElement("div");
+                product.className = "product";
+                product.innerHTML = `
+            <img src="${med.image}" alt="${med.name}">
+            <p>${med.name}</p>
+            <p class="price">${med.price}</p>
+            <button onclick="addToCartFromMain('${med.name}')">Adicionar ao Carrinho</button>
+        `;
+                container.appendChild(product);
+            });
+        }
+        showAllMedications();
+
+        const cart = [];
+
+        function showCategory(category) {
+            const container = document.getElementById("medicamentos");
+            container.innerHTML = "";
+            medications[category].forEach(med => {
+                const product = document.createElement("div");
+                product.className = "product";
+                product.innerHTML = `
+                    <img src="${med.image}" alt="${med.name}">
+                    <p>${med.name}</p>
+                    <p class="price">${med.price}</p>
+                    <button onclick="addToCart('${category}', '${med.name}')">Adicionar ao Carrinho</button>
+                `;
+                container.appendChild(product);
+            });
+        }
+
+        function addToCart(category, name) {
+            const medication = medications[category].find(med => med.name === name);
+            cart.push(medication);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartContainer = document.getElementById("cart-container");
+            const cartItems = cartContainer.querySelector(".cart-items");
+            cartItems.innerHTML = "";
+            cart.forEach(item => {
+                const cartItem = document.createElement("div");
+                cartItem.className = "cart-item";
+                cartItem.innerHTML = `
+                    <div class="item-name">
+                        <img src="${item.image}" alt="${item.name}">
+                        <span>${item.name}</span>
+                    </div>
+                    <div class="item-price">${item.price}</div>
+                `;
+                cartItems.appendChild(cartItem);
+            });
+            cartContainer.classList.add("show");
+        }
+
+        function finalizePurchase() {
+            const paymentMethods = document.querySelectorAll('input[name="payment"]');
+            let selectedPayment;
+            paymentMethods.forEach(method => {
+                if (method.checked) {
+                    selectedPayment = method.value;
+                }
+            });
+
+            if (selectedPayment) {
+                alert('Compra finalizada com sucesso!');
+                cart.length = 0;
+                updateCart();
+                const cartContainer = document.getElementById("cart-container");
+                cartContainer.classList.remove("show");
+                document.getElementById("order-code").classList.add("active");
+            } else {
+                alert("Por favor, selecione um método de pagamento.");
+            }
+        }
+
+        function openSuggestionForm() {
+            document.getElementById("suggestion-form-container").style.display = "block";
+        }
+
+        function sendSuggestion() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const suggestion = document.getElementById("suggestion").value;
+
+            if (name && email && phone && suggestion) {
+                alert("Sugestão enviada com sucesso!");
+                document.getElementById("suggestion-form").reset();
+                document.getElementById("suggestion-form-container").style.display = "none";
+            } else {
+                alert("Por favor, preencha todos os campos.");
+            }
+        }
+    </script>
+</body>
+
+</html>

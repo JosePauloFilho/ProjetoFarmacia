@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farma Moura</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding-top: 80px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        header {
+            background-color: rgb(250, 121, 0);
+            padding: 20px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .center {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            max-width: 1100px;
+        }
+
+        .logo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 2px solid white;
+            cursor: pointer;
+        }
+
+        .search-box {
+            flex: 3;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 2px solid rgb(252, 101, 0);
+            transition: all 0.3s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: rgb(115, 255, 0);
+        }
+
+        .cart-link {
+            flex: 1;
+            text-align: right;
+            padding-right: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .cart-link::after {
+            content: '🛒';
+            font-size: 24px;
+        }
+
+        nav {
+            margin-top: 20px;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            display: block;
+            border-radius: 10%;
+            overflow: hidden;
+            transition: border-color 0.3s ease;
+        }
+
+        nav ul li a img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            border: 2px solid transparent;
+            border-radius: 20%;
+            transition: 0.3s ease;
+        }
+
+        nav ul li a span {
+            display: block;
+            margin-top: 5px;
+        }
+
+        nav ul li a:hover img {
+            transform: scale(1.1);
+            border-color: rgb(253, 114, 0);
+        }
+
+        nav ul li a:hover {
+            border-color: rgb(255, 115, 0);
+        }
+
+        section {
+            margin: 20px 0;
+        }
+        footer {
+            background-color: rgb(250, 121, 0);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+            position: relative;
+            width: 100%;
+        }
+
+        footer ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        footer ul li {
+            margin-right: 20px;
+        }
+
+        footer ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-section {
+            margin-bottom: 20px;
+        }
+        .terms {
+            background: #f4f4f4;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .content {
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .center {
+                flex-direction: column;
+            }
+
+            .logo, .search-box, .cart-link {
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .search-box input {
+                width: 90%;
+            }
+
+            .cart-container {
+                width: 90%;
+                right: 5%;
+            }
+
+            footer ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            footer ul li {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="center">
+            <div class="logo">
+                <a href="farmacia.html"><img src="logofarmamoura.jpg" alt="Logo Farma Moura"></a>
+            </div>
+            <div class="search-box">
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <h2>Termos de Uso e Política de Privacidade</h2>
+        <div class="terms">
+            <p><strong>Termos de uso</strong></p>
+            <p>CERTIFIQUE-SE DE TER LIDO E COMPREENDIDO OS TERMOS DE USO E POLÍTICA DE PRIVACIDADE.A aceitação do presente Termo será confirmada com o ato de cadastramento (gratuito) do Usuário para utilização dos serviços prestados neste aplicativo e/ou website. O cadastro, navegação e a utilização dos serviços oferecidos neste Aplicativo implicam na imediata anuência deste Termo e seu conteúdo. Note que a recusa deste Termo impedirá que o Usuário faça pedidos, orçamentos e compras de produtos através do aplicativo. Este Termo descreve as condições aplicáveis ao Usuário em relação à utilização dos serviços disponibilizados neste aplicativo.</p>
+
+            <p><strong>1. Serviços Oferecidos</strong></p>
+            <p>1.1 Este aplicativo trata-se de uma plataforma online por meio da qual nossa loja oferece seus produtos (legalmente admitidos para comercialização) aos usuários do aplicativo, podendo praticar preços diferentes das lojas físicas. Ao efetuar uma compra através deste aplicativo ou site, o usuário assume a possibilidade de que o estoque de alguns produtos talvez não estejam mais disponíveis em nosso estoque físico, para pronta entrega.</p>
+
+            <p>1.2 Os serviços prestados pelo neste aplicativo estão disponíveis apenas para uso pessoal e não comercial. Portanto, não é permitido vender, fazer links, usar, copiar, monitorar, exibir, baixar ou reproduzir qualquer conteúdo ou informação, software, produtos ou serviços disponíveis no aplicativo para quaisquer atividades de propósito comercial ou competitivo.</p>
+
+            <p><strong>2. Cadastro e Utilização</strong></p>
+            <p>2.1 O cadastro, acesso e utilização deste aplicativo é gratuito. Todavia, tal circunstância poderá ser modificada a qualquer tempo e a seu exclusivo critério, o que deverá ser previamente cientificado ao Usuário para aceitação caso pretenda continuar utilizando o aplicativo. Nesta hipótese, as condições e forma de pagamento serão previstos em termo aditivo.</p>
+
+            <p>2.2 Para utilização dos serviços descritos neste Termo, o Usuário deverá prestar as informações exigidas para o seu cadastro no aplicativo, sendo única e exclusivamente responsável pelas informações fornecidas, bem como por manter o sigilo e a confidencialidade de seus dados e de sua senha de acesso perante terceiros.</p>
+
+            <p>2.3 O Usuário reconhece e aceita que lhe fica especialmente vedado: (a) fornecer qualquer informação pessoal que não seja verdadeira, completa, precisa e atualizada (especialmente no tocante a nome e identificação); (b) efetuar registro em nome de terceiros ou utilizando nome ou informações de terceiros sem prévia autorização; (c) acessar e/ou divulgar de forma não autorizada informações do site e aplicativoi, dos demais Usuários ou de terceiros, ou de qualquer forma desrespeitar a intimidade e/ou privacidade de qualquer pessoa; (d) utilizar qualquer arquivo, programa de computador, software ou código que possa conter vírus, causar bugs ou qualquer outro mecanismo que possa: (d.1) impedir, prejudicar ou de qualquer forma limitar o adequado funcionamento de equipamentos e softwares, o acesso à Internet e ao site e aplicativo; ou (d.2) implicar ou possibilitar o acesso não autorizado a informações confidenciais do site e aplicativo ou dos demais Usuários.</p>
+
+            <p>2.4 O aplicativo e site poderá rejeitar ou cancelar ordens de compra (pedidos) e pedidos de registro de qualquer Usuário que deixe de atender o disposto nestes Termos de Uso ou possa estar fornecendo informações falsas, incompletas ou imprecisas. Não será permitida a criação de novos cadastros por Usuário que tenha tido seu cadastro cancelado por violação destes Termos de Uso.</p>
+
+            <p>2.5 O site e aplicativo poderá exigir a confirmação da veracidade, exatidão e atualização das informações fornecidas pelo Usuário.</p>
+
+            <p>2.6 O site e aplicativo obriga-se a tratar como confidenciais os dados pessoais do Usuário que permitam a sua identificação, de acordo com sua Política de Privacidade. O Usuário será o único responsável pelas informações que vier a fornecer ou divulgar no site e aplicativo.</p>
+
+            <p>2.7 O Usuário poderá avaliar os serviços prestados pelo aplicativo site e aplicativo com relação aos negócios realizados por meio do aplicativo. Referida avaliação envolve não somente informações sobre a implementação do negócio, como comentários que justifiquem a avaliação apresentada. O Usuário será o único e exclusivo responsável pela avaliação e comentários que vier a apresentar, isentando o site e aplicativode qualquer responsabilidade nesse sentido. O site e aplicativo poderá usar e/ou divulgar referida avaliação, bem como excluir a avaliação e/ou os comentários em razão de decisão administrativa (interna) ou judicial.</p>
+
+            <p><strong>3. Obrigações do Usuário</strong></p>
+            <p>3.1 Efetuado o cadastro, o Usuário terá acesso aos serviços por meio de login e senha, dados esses que se compromete a não divulgar a terceiros, ficando sob sua exclusiva responsabilidade qualquer solicitação de serviço que seja feito com o uso de login e senha de sua titularidade. O site e aplicativo não se responsabiliza por qualquer dano que resulte da divulgação da senha do Usuário a terceiros.</p>
+
+            <p>3.2 É obrigação do Usuário fornecer informações cadastrais totalmente verídicas e exatas, responsabilizando-se exclusiva e integralmente por todo o conteúdo informado, mantendo atualizado e confirmado o endereço para entrega dos produtos encomendados.</p>
+
+            <p>3.3 O Usuário atesta que utiliza os serviços do aplicativo por sua livre e desimpedida escolha, bem como reconhece e aceita como de sua inteira responsabilidade e risco a utilização do aplicativo.</p>
+
+            <p>3.4 É vedada a transferência, cessão, comodato ou qualquer tipo de empréstimo, por qualquer forma, do cadastro do Usuário a terceiros. O cadastro do Usuário é pessoal e intransferível.</p>
+
+            <p>3.5 O Usuário se obriga, também, a pagar integralmente o preço dos produtos solicitados ou encomendados à farmácia e efetivamente a si entregues.</p>
+
+            <p>3.6 O Usuário garante que não usará os serviços do aplicativo para infringir a legislação brasileira.</p>
+
+            <p><strong>4. Obrigações do site e aplicativo</strong></p>
+            <p>4.1 Disponibilizar espaço virtual que permita ao Usuário devidamente cadastrado conectar- se, e assim, efetivar pedidos de compra de produtos anunciados e comercializados, além de disponibilizar ao Usuário meios de pagamento do preço dos produtos via online.</p>
+
+            <p>4.2 O Usuário reconhece e concorda que o site e aplicativo atuam na área de prestação de serviços farmacêuticos e/ou estabelecimentos similares que seguem as práticas e normas da Agência de Vigilância Sanitária (ANVISA).</p>
+
+            <p>4.3 Proteger o fluxo de informações entre Usuários e Servidor, bem como a confidencialidade de todas as informações e cadastros relativos ao Usuário, além dos valores atinentes às operações financeiras advindas da operacionalização dos serviços previstos neste Termo. Contudo, o site e aplicativo não responderá pela reparação de prejuízos que possam ser derivados de apreensão e cooptação de dados por parte de terceiros que, rompendo os sistemas de segurança, consigam acessar essas informações.</p>
+
+            <p>4.4 O site e aplicativo não será responsabilizado pelo Usuário quando os seus serviços não estiverem disponíveis por falhas em razão de: (a) qualquer defeito no equipamento de informática do Usuário; (b) deficiência de acesso à internet por parte do Usuário; (c) vírus de computador, bugs, malwares e programas correlatos, atualizações ou falhas de segurança que estejam no equipamento do Usuário; (d) quaisquer causas decorrentes de caso fortuito ou força maior, alheios ao controle do aplicativo e site.</p>
+
+            <p>4.5 O site e aplicativo não se responsabiliza por eventual reprovação de crédito no momento de contratação do serviço, uma vez que o procedimento é realizado pela respectiva operadora do cartão de crédito utilizado pelo Usuário, sem qualquer interferência do site e aplicativo.</p>
+
+            <p>4.6 Sem prejuízo de outras medidas cabíveis, o site e aplicativo poderá advertir, suspender ou cancelar, temporária ou definitivamente o cadastro do Usuário a qualquer tempo, e iniciar as ações legais cabíveis se: (a) o Usuário não cumprir qualquer dispositivo deste Termo; (b) se praticar atos fraudulentos ou dolosos; (c) se não puder ser verificada a identidade do Usuário ou qualquer informação fornecida por ele seja incorreta; (d) se o site e aplicativo entender que os serviços ou qualquer atitude do Usuário tenham causado algum dano a terceiros ou ao próprio site e aplicativo ou tenham a potencialidade de assim o fazer.</p>
+
+            <p><strong>5. Direitos Autorais e Propriedade Intelectual</strong></p>
+            <p>5.1 O uso comercial da expressão "MINHA LOJA", como marca, nome empresarial ou nome de domínio, bem como os conteúdos das telas relativas aos serviços do site e aplicativo, assim como os programas, bancos de dados, redes, arquivos que permitem que o Usuário acesse e use sua conta são propriedade do site e aplicativo e estão protegidos pelas leis e tratados internacionais de direito autoral, marcas, patentes, modelos e desenhos industriais. O uso indevido e a reprodução total ou parcial dos referidos conteúdos são proibidos, salvo a autorização expressa do site e aplicativo.</p>
+
+            <p><strong>6. Foro e legislação aplicável</strong></p>
+            <p>Este Termo é regido pelas leis da República Federativa do Brasil. Para dirimir quaisquer questões oriundas do presente Termo, as partes elegem o foro da comarca de São Paulo.</p>
+
+            <p><strong>Política de Privacidade</strong></p>
+            <p>1. Informações pessoais: Coletamos informações pessoais quando você se cadastra, faz uma compra ou interage com nossa loja. Isso pode incluir seu nome, endereço, e-mail e telefone.</p>
+
+            <p>2. Uso das informações: Usamos suas informações para processar pedidos, enviar atualizações e melhorar nossos serviços. Não compartilhamos suas informações com terceiros, exceto quando necessário para o cumprimento do serviço.</p>
+
+            <p>3. Segurança: Implementamos medidas de segurança para proteger suas informações. No entanto, nenhum método de transmissão pela Internet ou armazenamento eletrônico é 100% seguro.</p>
+
+            <p>4. Alterações: Podemos atualizar esta política periodicamente. Recomendamos revisar esta página regularmente para estar ciente de quaisquer mudanças.</p>
+
+            <p>5. Contato: Se tiver dúvidas sobre esta política, entre em contato conosco através de nossos canais de atendimento.</p>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-section">
+            <ul>
+                <li><a href="Termos de Privacidade.html">Termos de Serviço</a></li>
+                <li><a href="https://www.google.com/maps/place/R.+Daura+Saraíva,+287+-+Aeroporto,+Bayeux+-+PB,+58113-410/@-7.1409187,-34.9376958,17z/data=!3m1!4b1!4m6!3m5!1s0x7ace8c5b8700e03:0xb70c336d5687d3b1!8m2!3d-7.1409187!4d-34.9376958!16s%2Fg%2F11lcc586fk?entry=ttu">Endereço</a></li>
+                <li><a href="https://www.instagram.com/farma.moura/">Contato</a></li>
+            </ul>
+        </div>
+        <p>&copy; 2024 Farma Moura. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
